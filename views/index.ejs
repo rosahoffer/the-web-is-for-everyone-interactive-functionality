@@ -1,22 +1,68 @@
 <%- include('./partials/head.ejs') %>
 
-<h1><%= squad.name %></h1>
+<main>
+    <section class="wrapper-contain">
+        <section class="header-secundair">
+            <nav>
+                <img src="images/plantswap-logo-green.png" alt="Logo PlantSwap">
+                <ul>
+                    <li><a href="/index2">Over Ons</a></li>
+                    <li><a href="/index2">Stekjes</a></li>
+                    <li><a href="/index2#contact">Contact</a></li>
+                    <li><a href="/newStekje">Stekje Aanmelden</a></li>
+                </ul>   
+            </nav>
+        <div class="intro-contain" id="intro">
+          <h1><span>PlantSwap</span><span>Amsterdam</span></h1>
+          <p>Heb jij een of meerdere plantenstekjes over en zou je die graag willen ruilen voor een nieuw plantje? Bekijk hieronder ons aanbod.</p>
+          <a href="/index2">Bekijk Stekjes</a>
+          <a href="/index2">Lees Meer</a>
+          <svg class="blue-points" 
+              width="8" height="144" viewBox="0 0 8 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="2" cy="5.5" rx="6" ry="5.5" fill="#333467"/>
+              <circle cx="2" cy="32" r="6" fill="#333467"/>
+              <ellipse cx="2" cy="58.5" rx="6" ry="5.5" fill="#333467"/>
+              <circle cx="2" cy="85" r="6" fill="#333467"/>
+              <ellipse cx="2" cy="111.5" rx="6" ry="5.5" fill="#333467"/>
+              <circle cx="2" cy="138" r="6" fill="#333467"/>
+          </svg>
+          <div class="new-collection-contain" id="nieuwe stekjes">
+              <h3>Nieuwe Stekjes</h3>
+              <div>
+                  <% stekjes.forEach(stekje => { %>
+                      <div>
+                          <div class="image-plant-wrapper">
+                            <% if (stekje.fotos[0]) { %>
+                                <a href="/stekje">
+                                    <img class="image-plant" src="<%= stekje.fotos[0].original%>" width="<%= stekje.fotos[0].width%>" height="<%= stekje.fotos[0].height%>" loading="lazy">
+                                </a>
+                                    <% } else{ %>
+                                <img class="image-plant" src="./images/aglaonema.jpeg">
+                                <% } %>
+                          </div>
+                              <h4> <%= stekje.naam %> </h4>
+                              <p> <%= stekje.aanmelddatum %> </p>
+                      </div>
+                  <% }) %>
+              </div>
+          </div>            
+        </div>
+        </section>
+      <section class="slide-image-right">
+          <img src="images/pexels-maria-orlova-4913376.jpg">
+          <svg class="blue-points-stroke"
+                  width="51" height="298" viewBox="0 0 51 298" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M55 1H6V340" stroke="#4E7141" stroke-width="2"/>
+                  <ellipse cx="6" cy="72.5" rx="6" ry="5.5" fill="#333467"/>
+                  <circle cx="6" cy="109" r="6" fill="#333467"/>
+                  <circle cx="6" cy="182" r="6" fill="#333467"/>
+                  <circle cx="6" cy="146" r="6" fill="#333467"/>
+                  <ellipse cx="6" cy="218.5" rx="6" ry="5.5" fill="#333467"/>
+                  <circle cx="6" cy="255" r="6" fill="#333467"/>
+              </svg>
+      </section>
+  </section>
+</main>
 
-<% squad.members.forEach(member => { %>
-
-  <article>
-    <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2>
-    <img src="<%= member.avatar != '' ? member.avatar :'/placeholder.jpg' %>" alt="De avatar van <%= member.name %>" />
-    <a href="/member/?id=<%= member.id %>"></a>
-  </article>
-
-<% }) %>
-
-
-  <article>
-    <h2>Jouw kaartje hier?</h2>
-    <img src="/placeholder.jpg" alt="Jouw avatar hier?" />
-    <a href="/member/new?squad=<%= squad.id %>&"></a>
-  </article>
 
 <%- include('./partials/foot.ejs') %>

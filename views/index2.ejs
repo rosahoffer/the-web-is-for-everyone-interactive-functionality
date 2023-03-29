@@ -1,0 +1,103 @@
+<%- include('./partials/head.ejs') %>
+
+<main>
+    <section class="header-primair">
+        <nav>   
+            <img src="images/plantswap-logo-green.png" alt="Logo PlantSwap">
+            <ul>
+                <li><a href="#over-ons">Over Ons</a></li>
+                <li><a href="#onze-stekjes">Stekjes</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/newStekje">Stekje Aanmelden</a></li>
+            </ul>   
+        </nav>
+    </section>
+    <section class="about-us-contain" id="over-ons">
+        <div>
+            <h2>Over ons</h2>
+            <p>De Buurtcampus Oost heeft als doel Amsterdam-Oost duurzamer, inclusiever en gezonder te maken. Plant Swap Amsterdam zorgt ervoor dat plantenliefhebbers elkaar ontmoeten in de bibliotheek. Daarnaast hebben planten in huis een positief effect op je lichamelijke en geestelijke gezondheid. Veel mensen weten niet goed hoe ze voor planten moeten zorgen en kopen nieuwe als ze dood gaan. In het kader van duurzaamheid, gezondheid en meer sociale connectie, is PlantSwap Amsterdam een plek van sociale ontmoeting, waar mensen samen leren over planten.</p>
+        </div>
+        <img src="images/bc_netwerk.png">
+        <svg class="blue-points"
+            width="8" height="144" viewBox="0 0 8 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="2" cy="5.5" rx="6" ry="5.5" fill="#333467"/>
+            <circle cx="2" cy="32" r="6" fill="#333467"/>
+            <ellipse cx="2" cy="58.5" rx="6" ry="5.5" fill="#333467"/>
+            <circle cx="2" cy="85" r="6" fill="#333467"/>
+            <ellipse cx="2" cy="111.5" rx="6" ry="5.5" fill="#333467"/>
+            <circle cx="2" cy="138" r="6" fill="#333467"/>
+        </svg>
+    </section>
+    <section class="collection-contain" id="onze-stekjes">
+        <h2>Onze Stekjes</h2>
+        <p>Heb jij een of meerdere plantenstekjes over en zou je die graag willen ruilen voor een nieuw plantje? Bekijk hieronder ons aanbod.</p>
+        <svg class="white-points"
+            width="8" height="144" viewBox="0 0 8 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="2" cy="5.5" rx="6" ry="5.5" fill="white"/>
+            <circle cx="2" cy="32" r="6" fill="white"/>
+            <ellipse cx="2" cy="58.5" rx="6" ry="5.5" fill="white"/>
+            <circle cx="2" cy="85" r="6" fill="white"/>
+            <ellipse cx="2" cy="111.5" rx="6" ry="5.5" fill="white"/>
+            <circle cx="2" cy="138" r="6" fill="white"/>
+        </svg>
+        <div class="plant-collection reveal">
+            <% stekjes.forEach(stekje => { %>
+                <div>
+                    <div class="image-plant-wrapper">
+                        <% if (stekje.fotos[0]) { %>
+                            <img class="image-plant" src="<%= stekje.fotos[0].original%>" width="<%= stekje.fotos[0].width%>" height="<%= stekje.fotos[0].height%>" loading="lazy">
+                          <% } else{ %>
+                            <img class="image-plant" src="./images/aglaonema.jpeg">
+                            <% } %>
+                      </div>
+                        <h4> <%= stekje.naam %> </h4>
+                        <p> <%= stekje.aanmelddatum %> </p>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+    <section class="contact-contain reveal" id="contact">
+        <div>
+            <h2>Contact</h2>
+            <p>Neem contact met ons op, door onderstaand formulier in te vullen.</p>
+            <svg class="blue-points-2"
+                width="8" height="144" viewBox="0 0 8 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="2" cy="5.5" rx="6" ry="5.5" fill="#333467"/>
+                <circle cx="2" cy="32" r="6" fill="#333467"/>
+                <ellipse cx="2" cy="58.5" rx="6" ry="5.5" fill="#333467"/>
+                <circle cx="2" cy="85" r="6" fill="#333467"/>
+                <ellipse cx="2" cy="111.5" rx="6" ry="5.5" fill="#333467"/>
+                <circle cx="2" cy="138" r="6" fill="#333467"/>
+            </svg>
+            <form class="contact-form">
+                <label for="text">Naam</label>
+                <input type="text" placeholder="Uw naam" name="name" required>  
+        
+                <label for="email">Email</label>
+                <input type="text" placeholder="Uw e-mailadres" name="email" required>
+
+                <label for="text">Bericht</label>
+                <input type="text" placeholder="Schrijf hier uw vraag...." name="text" required>
+
+                <button id="send-button" type= "submit" value="default">Verzenden</button>
+            </form>
+        </div>
+        <div class="contact-facts">
+            <h3>Contact Gegevens</h3>
+            <p>
+                <span>OBA Linnaeusstraat</span>
+                <span>Linnaeusstraat 44</span>
+                <span>1092 CL Amsterdam</span>
+            </p>
+        </div>
+        <svg class="blue-points-stroke-small"
+            width="51" height="168" viewBox="0 0 51 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M55 1H6V168" stroke="#4E7141" stroke-width="2"/>
+            <circle cx="6" cy="46" r="6" fill="#333467"/>
+            <circle cx="6" cy="82" r="6" fill="#333467"/>
+            <circle cx="6" cy="119" r="6" fill="#333467"/>
+        </svg>
+    </section>
+</main>
+
+<%- include('./partials/foot.ejs') %>
