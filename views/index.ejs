@@ -30,19 +30,19 @@
               <h3>Nieuwe Stekjes</h3>
               <div>
                   <% stekjes.forEach(stekje => { %>
-                      <div>
+                    <a class="plant-link" href="/stekje/<%= stekje.id %>">
+                        <div>
                           <div class="image-plant-wrapper">
                             <% if (stekje.fotos[0]) { %>
-                                <a href="/stekje">
                                     <img class="image-plant" src="<%= stekje.fotos[0].original%>" width="<%= stekje.fotos[0].width%>" height="<%= stekje.fotos[0].height%>" loading="lazy">
-                                </a>
-                                    <% } else{ %>
-                                <img class="image-plant" src="./images/aglaonema.jpeg">
-                                <% } %>
+                            <% } else{ %>
+                                    <img class="image-plant" src="./images/aglaonema.jpeg">
+                                    <% } %>
                           </div>
                               <h4> <%= stekje.naam %> </h4>
                               <p> <%= stekje.aanmelddatum %> </p>
-                      </div>
+                        </div>
+                    </a>
                   <% }) %>
               </div>
           </div>            

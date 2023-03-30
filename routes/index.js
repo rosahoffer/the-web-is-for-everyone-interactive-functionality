@@ -27,14 +27,6 @@ index.get('/index2', async function (req, res) {
 })
 })
 
-// Route voor detailpagina
-index.get('/stekje', async function (req, res) {
-  const url = process.env.API_URL + '/stekjes'
-  fetchJson(url).then ((data)=> {
-    res.render('stekje', data)
-})
-})
-
 // Route voor stekje aanmelden form
 index.get('/newStekje', async function (req, res) {
   const url = process.env.API_URL
@@ -61,4 +53,5 @@ index.post('/newStekje', async function (req, res) {
 })
 
 export default index
+
 

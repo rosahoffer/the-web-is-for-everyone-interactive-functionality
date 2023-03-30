@@ -1,9 +1,17 @@
-<%- include('./partials/head.ejs') %>
 
-<section>
-  <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2>
-  <img src="<%= member.avatar != '' ? member.avatar :'/placeholder.jpg' %>" alt="De avatar van <%= member.name %>" />
-  <p><%- member.bio.html %></p>
+
+<section class="header-primair">
+  <nav>   
+      <img src="images/plantswap-logo-green.png" alt="Logo PlantSwap">
+      <ul>
+          <li><a href="#over-ons">Over Ons</a></li>
+          <li><a href="#onze-stekjes">Stekjes</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/newStekje">Stekje Aanmelden</a></li>
+      </ul>   
+  </nav>
 </section>
-
-<%- include('./partials/foot.ejs') %>
+<section>
+  <h4> <%= stekje.naam %> </h4>
+  <p> <%= stekje.aanmelddatum %> </p>
+</section>

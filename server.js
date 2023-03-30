@@ -1,5 +1,6 @@
 import express from 'express'
 import indexRoute from './routes/index.js'
+import stekjeRoute from'./routes/stekjeRoute.js'
 
 // Maak een nieuwe express app
 const server = express()
@@ -20,6 +21,7 @@ server.use(express.static('public'))
 
 // Stel de routes in
 server.use('/', indexRoute)
+server.use('/stekje', stekjeRoute)
 
 // Start met luisteren
 server.listen(server.get('port'), () => {
