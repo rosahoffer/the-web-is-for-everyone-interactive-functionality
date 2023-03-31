@@ -1,17 +1,82 @@
+<%- include('./partials/head.ejs') %>
 
+<main>
+  <section class="contain-wrap">
+    <section class="header-primair">
+      <nav>   
+          <img src="/images/plantswap-logo-green.png" alt="Logo PlantSwap">
+          <ul>
+              <li><a href="/index2">Over Ons</a></li>
+              <li><a href="/index2">Stekjes</a></li>
+              <li><a href="/index2#contact">Contact</a></li>
+              <li><a href="/newStekje">Stekje Aanmelden</a></li>
+          </ul>   
+      </nav>
+    </section>
 
-<section class="header-primair">
-  <nav>   
-      <img src="images/plantswap-logo-green.png" alt="Logo PlantSwap">
-      <ul>
-          <li><a href="#over-ons">Over Ons</a></li>
-          <li><a href="#onze-stekjes">Stekjes</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="/newStekje">Stekje Aanmelden</a></li>
-      </ul>   
-  </nav>
-</section>
-<section>
-  <h4> <%= stekje.naam %> </h4>
-  <p> <%= stekje.aanmelddatum %> </p>
-</section>
+      <svg class="blue-points" 
+          width="8" height="144" viewBox="0 0 8 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="2" cy="5.5" rx="6" ry="5.5" fill="#333467"/>
+          <circle cx="2" cy="32" r="6" fill="#333467"/>
+          <ellipse cx="2" cy="58.5" rx="6" ry="5.5" fill="#333467"/>
+          <circle cx="2" cy="85" r="6" fill="#333467"/>
+          <ellipse cx="2" cy="111.5" rx="6" ry="5.5" fill="#333467"/>
+          <circle cx="2" cy="138" r="6" fill="#333467"/>
+      </svg>
+
+    <section class="plant-info">
+        <div class="image-plant-bg">
+            <div class="image-plant-wrapper-detail">
+              <% if (stekje.fotos[0]) { %>
+                      <img class="image-plant" src="<%= stekje.fotos[0].original%>" width="<%= stekje.fotos[0].width%>" height="<%= stekje.fotos[0].height%>" loading="lazy">
+              <% } else{ %>
+                      <img class="image-plant" src="../images/aglaonema.jpeg">
+                      <% } %>
+            </div>
+        </div>
+        <div>
+            <p> <%= stekje.aanmelddatum %> 30-04-2023</p>
+            <h2> <%= stekje.naam %> </h2>
+            <p>Even een korte beschrijving over dit plantje, bijvoorbeeld met een klein beetje informatie.</p>
+            <a href="/">Deze wil ik</a>
+        </div>
+    </section>
+
+        <div class="svg-wrapper">
+            <svg class="blue-points-stroke-hoirzontal"  
+              width="1078" height="18" viewBox="0 0 1078 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 9L1077.5 9" stroke="#4E7141" stroke-width="2"/>
+              <circle cx="108" cy="9" r="8.5" transform="rotate(-90 108 9)" fill="#333467" stroke="#333467"/>
+              <circle cx="724" cy="9" r="8.5" transform="rotate(-90 724 9)" fill="#333467" stroke="#333467"/>
+              <circle cx="262" cy="9" r="8.5" transform="rotate(-90 262 9)" fill="#333467" stroke="#333467"/>
+              <circle cx="878" cy="9" r="8.5" transform="rotate(-90 878 9)" fill="#333467" stroke="#333467"/>
+              <circle cx="1015" cy="9" r="8.5" transform="rotate(-90 1015 9)" fill="#333467" stroke="#333467"/>
+              <circle cx="416" cy="9" r="8.5" transform="rotate(-90 416 9)" fill="#333467" stroke="#333467"/>
+              <circle cx="570" cy="9" r="8.5" transform="rotate(-90 570 9)" fill="#333467" stroke="#333467"/>
+            </svg>
+        </div>
+
+    <section class="plant-info-detail-contain">
+        <div class="plant-info-detail">
+          <div>
+            <h4>Land van herkomst</h4>
+            <li><%= stekje.landvanherkomst %></li>
+          </div>
+          <div>
+            <h4>Giftig</h4>
+            <li> <%= stekje.giftig %> </li>
+          </div>
+          <div>
+            <h4>Verpotten</h4>
+            <li> <%= stekje.verpotten %> </li>
+          </div>
+          <div>
+            <h4>Voeding</h4>
+            <li> <%= stekje.voeding %> </li>
+          </div>
+      </div>
+    </section>
+  </section>
+</main>
+
+<%- include('./partials/foot.ejs') %>

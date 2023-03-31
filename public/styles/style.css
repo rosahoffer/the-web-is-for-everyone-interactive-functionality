@@ -306,6 +306,67 @@ p{
   flex-direction: column;
 }
 
+/* STEKJE */
+
+.plant-info{
+  padding: 3rem;
+}
+
+.plant-info div{
+  margin-bottom: 3rem;
+}
+
+.plant-info h2{
+  margin-top: -1rem;
+}
+
+.plant-info > div > p{
+  margin-bottom: 2rem;
+}
+
+.plant-info a{
+  background-color: var(--primary);
+  color: white;
+  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+  border-radius: 25px;
+  border: solid 1px var(--primary);
+  text-decoration: none;
+}
+
+.plant-info a:hover{
+  background-color: var(--tertiary);
+  border: solid 1px var(--tertiary);
+  transition: ease-in 0.2s;
+}
+
+.svg-wrapper{
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.blue-points-stroke-horizontal{
+  object-fit: cover;
+}
+
+.plant-info-detail-contain{
+  padding: 3rem 3rem 5rem 3rem;
+  background-color: var(--secondary);
+}
+
+.plant-info-detail-contain h4{
+  color: white;
+}
+
+.plant-info-detail-contain h4{
+  padding-top: 2rem;
+  color: white;
+}
+
+.plant-info-detail-contain li{
+  color: white;
+}
+
 /* CONTACT FORM  */
 
 .contact-form{
@@ -579,6 +640,47 @@ fieldset{
 
   .contact-facts{
     padding: 9rem 0rem 0rem 10rem;
+  }
+
+  /* STEKJE */
+
+  .contain-wrap{
+    position: relative;
+  }
+
+  .plant-info{
+    margin: 3rem 0rem 0rem 43rem;
+    max-width: 40rem;
+  }
+
+  .blue-points-stroke-hoirzontal{
+    position: absolute;
+    right: 0;
+  }
+
+  .image-plant-wrapper-detail{
+    position: absolute;
+    top: 20%;
+    left: 7.5rem;
+    width: 500px;
+    height: 500px;
+    border: solid 15px white;
+    border-radius: 25px;
+    background-color: white;
+  }
+
+  .plant-info-detail-contain{
+    margin-top: 3rem;
+    padding-bottom: 10rem;
+  }
+
+  .plant-info-detail{
+    width: 100%;
+    display: flex;
+    gap: 5rem;
+    padding-left: 43rem;
+    max-width: 40rem;
+    list-style-type: none;
   }
 
   /* STEKJE AANMELDEN */
