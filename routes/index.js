@@ -31,7 +31,7 @@ index.get('/index2', async function (req, res) {
 index.get('/newStekje', async function (req, res) {
   const url = process.env.API_URL
   fetchJson(url).then((data) => {
-    res.render('stekjeaanmelden', data)
+    res.render('aanmelden', data)
   })
 })
 
