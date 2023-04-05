@@ -37,6 +37,10 @@ Deze website wordt gebruikt voor het bezoeken van het nieuwe project PlantSwap, 
 
 https://api.buurtcampus-oost.fdnd.nl/api/v1/stekjes | Voor de api van de stekjes
 
+https://alistapart.com/article/understandingprogressiveenhancement/ | Informatie op doen over Progressive Enhancement
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form. | Voor het bouwen van een goed formulier
+
 ## Licentie
 
 ![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
