@@ -1,6 +1,8 @@
-# Titel
+# Plantswap - _Buurtcampus-Oost_
 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
+
+![devices-plantswap-round](https://user-images.githubusercontent.com/112861375/230185281-98ba2fa3-23e1-4d02-8dbc-e41d802652fa.png)
 
 ## Inhoudsopgave
 
