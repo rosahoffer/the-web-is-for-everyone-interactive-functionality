@@ -16,11 +16,14 @@ Ontwerp en maak voor de Buurtcampus-Oost een interactieve toepassing die voor ie
 
 ## Beschrijving
 
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
+Deze website is gemaakt voor het project Plantswap, Op deze website kun je informatie vinden over stekjes, foto's bekijken van de stekjes en je kunt een stekje aanmelden met behulp van een formulier. 
 
 ## Kenmerken
+Ik heb interactieve functionaliteit ontworpen en gemaakt met Node, Express en EJS en een REST API en client-side JS, CSS en HTML
 
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+**Progressive Enhancement**
+
+Progressive Enhancement houdt in dat je een website of app bouwt op een manier waarbij de basisfuncties en inhoud voor alle gebruikers toegankelijk zijn, ongeacht welke browser, apparaat of technologie ze gebruiken.
 
 ## Installatie
 
