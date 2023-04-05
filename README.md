@@ -2,7 +2,8 @@
 
 Ontwerp en maak voor de Buurtcampus-Oost een interactieve toepassing die voor iedereen toegankelijk is
 
-![devices-plantswap-round](https://user-images.githubusercontent.com/112861375/230185281-98ba2fa3-23e1-4d02-8dbc-e41d802652fa.png)
+![devices-plantswap-round](https://user-images.githubusercontent.com/112861375/230187328-dd06ff5e-4da1-45c0-a1b5-a91bcf2c52ca.png)
+
 
 ## Inhoudsopgave
 
