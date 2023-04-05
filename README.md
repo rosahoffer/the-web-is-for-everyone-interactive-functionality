@@ -1,6 +1,6 @@
 # Plantswap - _Buurtcampus-Oost_
 
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+Ontwerp en maak voor de Buurtcampus-Oost een interactieve toepassing die voor iedereen toegankelijk is
 
 ![devices-plantswap-round](https://user-images.githubusercontent.com/112861375/230185281-98ba2fa3-23e1-4d02-8dbc-e41d802652fa.png)
 
@@ -15,24 +15,7 @@
 
 ## Beschrijving
 
-Voor Tolga hier het voorbeeld uit het college:
-
-```
-Server.js + express
-          + routes/index.js + .env
-                            + express
-                            + helpers/fetchWrapper.js
-                            -> views/index.ejs
-          + routes/member.js + .env
-                             + express
-                             + helpers/fetchWrapper.js
-                             -> views/member.ejs
-                             -> views/memberForm.ejs
-```
-
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
 
 ## Kenmerken
 
@@ -40,9 +23,15 @@ Server.js + express
 
 ## Installatie
 
+Ik heb NPM en Node geïnstalleerd door middel van npm install en npm install node.
+
 ## Gebruik
 
+Deze website wordt gebruikt voor het bezoeken van het nieuwe project PlantSwap, bedacht door de Buurtcampus-Oost.
+
 ## Bronnen
+
+https://api.buurtcampus-oost.fdnd.nl/api/v1/stekjes | Voor de api van de stekjes
 
 ## Licentie
 
