@@ -16,7 +16,7 @@ Ontwerp en maak voor de Buurtcampus-Oost een interactieve toepassing die voor ie
 
 ## Beschrijving
 
-Deze website is gemaakt voor het project Plantswap, Op deze website kun je informatie vinden over stekjes, foto's bekijken van de stekjes en je kunt een stekje aanmelden met behulp van een formulier. 
+Op deze website kun je informatie vinden over stekjes, foto's bekijken van stekjes en je kunt een stekje aanmelden met behulp van een formulier. 
 
 ## Kenmerken
 Ik heb interactieve functionaliteit ontworpen en gemaakt met Node, Express en EJS en een REST API en client-side JS, CSS en HTML
